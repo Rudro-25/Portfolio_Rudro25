@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio_Rudro25/static/css/main.b6c3fe9f.css",
-    "main.js": "/Portfolio_Rudro25/static/js/main.5faf9a59.js",
+    "main.js": "/Portfolio_Rudro25/static/js/main.5b7eb561.js",
     "static/css/64.bba8fa55.chunk.css": "/Portfolio_Rudro25/static/css/64.bba8fa55.chunk.css",
     "static/js/64.41912c0a.chunk.js": "/Portfolio_Rudro25/static/js/64.41912c0a.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/Portfolio_Rudro25/static/css/769.b3cbb36b.chunk.css",
@@ -56,7 +56,7 @@
     "index.html": "/Portfolio_Rudro25/index.html",
     "static/media/talksCardBack.svg": "/Portfolio_Rudro25/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.b6c3fe9f.css.map": "/Portfolio_Rudro25/static/css/main.b6c3fe9f.css.map",
-    "main.5faf9a59.js.map": "/Portfolio_Rudro25/static/js/main.5faf9a59.js.map",
+    "main.5b7eb561.js.map": "/Portfolio_Rudro25/static/js/main.5b7eb561.js.map",
     "64.bba8fa55.chunk.css.map": "/Portfolio_Rudro25/static/css/64.bba8fa55.chunk.css.map",
     "64.41912c0a.chunk.js.map": "/Portfolio_Rudro25/static/js/64.41912c0a.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/Portfolio_Rudro25/static/css/769.b3cbb36b.chunk.css.map",
@@ -64,6 +64,6 @@
   },
   "entrypoints": [
     "static/css/main.b6c3fe9f.css",
-    "static/js/main.5faf9a59.js"
+    "static/js/main.5b7eb561.js"
   ]
 }
