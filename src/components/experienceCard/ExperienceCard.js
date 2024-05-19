@@ -1,4 +1,4 @@
-import React, { useState, createRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
 
@@ -13,18 +13,20 @@ export default function ExperienceCard({ cardInfo, isDark }) {
   }
 
   const [colorArrays, setColorArrays] = useState([]);
-  const imgRef = createRef();
+  const imgRef = useRef();
+
+  const getColorArrays = useCallback(() => {
+    if (imgRef.current && imgRef.current.complete) {
+      const colorThief = new ColorThief();
+      setColorArrays(colorThief.getColor(imgRef.current));
+    }
+  }, [imgRef]);
 
   useEffect(() => {
     if (imgRef.current && imgRef.current.complete) {
       getColorArrays();
     }
-  }, [imgRef]);
-
-  function getColorArrays() {
-    const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current));
-  }
+  }, [getColorArrays]);
 
   function rgb(values) {
     return typeof values === "undefined"
@@ -65,17 +67,16 @@ export default function ExperienceCard({ cardInfo, isDark }) {
         <h5 className={isDark ? "experience-text-role dark-mode-text" : "experience-text-role"}>
           {role}
         </h5>
+        <h5 className={isDark ? "experience-text-date dark-mode-text" : "experience-text-date"}>
+          {date}
+        </h5>
         <p className={isDark ? "subTitle experience-text-desc dark-mode-text" : "subTitle experience-text-desc"}>
           {desc}
         </p>
         <ul>
           <GetDescBullets descBullets={descBullets} isDark={isDark} />
         </ul>
-        <h5 className={isDark ? "experience-text-date dark-mode-text" : "experience-text-date"}>
-          {date}
-        </h5>
       </div>
-
       
       <div className="certificate-card-footer">
         {Array.isArray(footer) && footer.map((v, i) => (
